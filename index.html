@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  
+  <style>
+    body {
+      height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Nội dung trang */
+    .content {
+      min-height: 80vh; /* để footer luôn nằm dưới */
+      padding: 20px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #0d1f8c; /* xanh đậm */
+      color: white;
+      padding: 30px 50px;
+      
+      margin-top: 40px;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .footer-column {
+      flex: 1;
+      min-width: 200px;
+      margin: 10px;
+    }
+
+    .footer-column h3 {
+      color: orange;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-column ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer-column ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      width: 35px;
+      height: 35px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0d1f8c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .social-icons a:hover {
+      background: orange;
+      color: white;
+    }
+    .logo-fixed {
+    position: fixed;
+    top: 20px;   /* khoảng cách từ trên xuống */
+    left: 20px;  /* khoảng cách từ trái qua */
+    width: 100px; /* kích thước logo */
+    z-index: 1000; /* để logo nằm trên cùng */
+  }
+  main {
+  flex: 1; /* chiếm hết khoảng trống còn lại */
+}
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang chính</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Thư viện JSZip -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #002b80;
+      color: white;
+      text-align: center;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang chính</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  
+  
+</head>
+<img src="logoe2.png" alt="Logo Đoàn" class="logo-fixed" id="mainLogo">
+<body class="bg-gradient-to-b from-blue-900 to-blue-700 text-white min-h-screen flex flex-col">
+</head>
+<body class="p-6">
+
+  <!-- Tiêu đề -->
+  <div class="til mb-6">
+    <img src="Huy_Hiệu_Đoàn.png" width="200" alt="" class="mx-auto">
+    <h1 class="text-yellow-300 text-2xl font-bold mt-4">
+      ĐẠI HỘI ĐẠI BIỂU ĐOÀN THANH NIÊN CỘNG SẢN HỒ CHÍ MINH
+<br>TRUNG ĐOÀN 2 LẦN THỨ IXNHIỆM KỲ 2025 - 2030
+    </h1>
+    <h2 class="mt-2">📂 VĂN KIỆN ĐIỆN TỬ</h2>
+    <h3 class="text-gray-200">Dùng trong Đại hội đại biểu</h3>
+  </div>
+
+  <!-- MENU NÚT CHÍNH -->
+  <div id="mainMenu" class="flex flex-col space-y-4 max-w-md mx-auto">
+    <!-- Nút 1 -->
+    <div>
+      <button onclick="toggleOptions('opt1')" 
+              class="w-full bg-sky-400 text-black font-bold px-6 py-3 rounded-md">
+        📂VĂN BẢN QUTW, BQP
+      </button>
+      <div id="opt1" class="hidden mt-2 space-y-2">
+        <button onclick="openViewer('viewer1')" class="block w-full text-left bg-blue-700 text-white px-4 py-2 rounded-md">
+          CHỈ THỊ SỐ 4418 NGÀY 31.8.2025 CỦA QUTW
+        </button>
+        <button onclick="openViewer('viewer2')" class="block w-full text-left bg-blue-700 text-white px-4 py-2 rounded-md">
+          HƯỚNG DẪN SỐ 3523 ngày 09.9.2025 CỦA TCCT
+        </button>
+        <!--<button onclick="openViewer('viewerthem')" class="block w-full text-left bg-blue-700 text-white px-4 py-2 rounded-md">
+          CÔNG VĂN SỐ 1231 NGÀY 10/9/2025 CỦA BTNQĐ VỀ PHỐI HỢP CHỈ ĐẠO ĐH
+        </button>-->
+      </div>
+    </div>
+
+    <!-- Nút 2 -->
+    <div>
+      <button onclick="toggleOptions('opt2')" 
+              class="w-full bg-sky-400 text-black font-bold px-6 py-3 rounded-md">
+        📂VĂN BẢN QUÂN KHU
+      </button>
+      <div id="opt2" class="hidden mt-2 space-y-2">
+        <button onclick="openViewer('viewer3')" class="block w-full text-left bg-blue-700 text-white px-4 py-2 rounded-md">
+          CHỈ THỊ CỦA BAN THƯỜNG VỤ ĐẢNG ỦY QUÂN KHU
+        </button>
+       <!-- <button onclick="openViewer('viewer4')" class="block w-full text-left bg-blue-700 text-white px-4 py-2 rounded-md">
+          HƯỚNG DẪN SỐ 1532/HD-CCT NGÀY 20/8/2025
+        </button>
+        <button onclick="openViewer('viewert1')" class="block w-full text-left bg-blue-700 text-white px-4 py-2 rounded-md">
+          CÔNG VĂN SỐ 1764 NGÀY 11/9/2025 VỀ TRIỆU TẬP ĐẠI BIỂU
+        </button>
+        <button onclick="openViewer('viewert2')" class="block w-full text-left bg-blue-700 text-white px-4 py-2 rounded-md">
+          KẾ HOẠCH 1767 NGÀY 11/9/2025 VỀ BẢO ĐẢM PHỤC VỤ
+        </button>-->
+      </div>
+    </div>
+
+  
+    <div>
+      <button onclick="toggleOptions('opt4')" 
+              class="w-full bg-sky-400 text-black font-bold px-6 py-3 rounded-md">
+        📂VĂN BẢN SƯ ĐOÀN
+      </button>
+      <div id="opt4" class="hidden mt-2 space-y-2">
+        <button onclick="openViewer('viewerT3')" class="block w-full text-left bg-blue-700 text-white px-4 py-2 rounded-md">
+          CHỈ THỊ SỐ 109 ngày 05.9.2025 của BTV ĐU Sư đoàn
+        </button>
+        
+      </div>
+    </div>
+
+    <!-- Nút 3 -->
+     <div>
+      <button onclick="toggleOptions('opt5')" 
+              class="w-full bg-sky-400 text-black font-bold px-6 py-3 rounded-md">
+        📂 VĂN KIỆN ĐẠI HỘI
+      </button>
+      <div id="opt5" class="hidden mt-2 space-y-2">
+        
+        <button >
+          <ul><li><a href="https://drive.google.com/drive/folders/1Bp7YEtkjXp2pinvAHvDnzCHCj0VGciOp" target="_blank"
+          class="block w-full text-left bg-green-700 text-white px-4 py-2 rounded-md">
+          TẤT CẢ VĂN BẢN</a></li></ul>
+        </button>
+        
+        
+        <button onclick="openViewer('viewer7')" class="block w-full text-left bg-blue-700 text-white px-4 py-2 rounded-md">
+          HƯỚNG DẪN ĐẠI HỘI
+        </button>
+        <button onclick="openViewer('viewer8')" class="block w-full text-left bg-blue-700 text-white px-4 py-2 rounded-md">
+          BÁO CÁO CHÍNH TRỊ
+        </button>
+        
+      </div>
+    </div>
+    <!-- Nút 2 -->
+
+<!--<a href="https://drive.google.com/drive/folders/1--3bgtTEUxSbFDTgN9k9xvmL_p0uTy3U" target="_blank" 
+   class="block w-full text-center bg-sky-400 text-black font-bold px-6 py-3 rounded-md">
+  📂 ẢNH HOẠT ĐỘNG CỦA ĐƠN VỊ
+</a>-->
+
+
+  </div>
+
+  
+
+  <!-- VIEWERS -->
+  <!-- Viewer 1 -->
+  <div id="viewer1" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50 overflow-y-auto">
+    <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
+      <button onclick="goBack('viewer1')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
+      <h2 class="font-bold text-lg">CHỈ THỊ SỐ 4418 NGÀY 31.8.2025 CỦA QUTW</h2>
+      <button onclick="downloadZip('viewer1')" class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</button>
+    </div>
+    <div class="flex flex-col items-center">
+      <img src="1.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="2.jpg" class="w-full max-w-4xl mb-4" alt="Trang 2">
+      <img src="3.jpg" class="w-full max-w-4xl mb-4" alt="Trang 3">
+    </div>
+  </div>
+
+  <!-- Viewer 2 -->
+<div id="viewer2" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50">
+  <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
+    <button onclick="goBack('viewer2')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
+    <h2 class="font-bold text-lg">HƯỚNG DẪN SỐ 3523 ngày 09.9.2025 CỦA TCCT</h2>
+    <a href="huongdan.pdf" download class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</a>
+  </div>
+
+  <!-- Hiển thị file PDF -->
+  <iframe src="huongdan.pdf#view=FitH" 
+          class="w-full h-[90vh]" 
+          frameborder="0"></iframe>
+</div>
+<!-- Viewer them -->
+<div id="viewerthem" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50">
+  <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
+    <button onclick="goBack('viewerthem')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
+    <h2 class="font-bold text-lg">CÔNG VĂN SỐ 1231 NGÀY 10/9/2025 CỦA BTNQĐ VỀ PHỐI HỢP CHỈ ĐẠO ĐH
+</h2>
+    <a href="congvan 1231.pdf" download class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</a>
+  </div>
+
+  <!-- Hiển thị file PDF -->
+  <iframe src="congvan 1231.pdf#view=FitH" 
+          class="w-full h-[90vh]" 
+          frameborder="0"></iframe>
+</div>
+
+
+  <!-- Viewer 3 -->
+  <div id="viewer3" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50 overflow-y-auto">
+    <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
+      <button onclick="goBack('viewer3')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
+      <h2 class="font-bold text-lg">CHỈ THỊ CỦA BAN THƯỜNG VỤ ĐẢNG ỦY QUÂN KHU</h2>
+      <a href="quandoan/Doc1.pdf" download class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</a>
+    </div>
+    <div class="flex flex-col items-center">
+      <iframe src="quandoan/Doc1.pdf" 
+          class="w-full h-[90vh]" 
+          frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <!-- Viewer 4 -->
+  <div id="viewer4" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50 overflow-y-auto">
+    <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
+      <button onclick="goBack('viewer4')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
+      <h2 class="font-bold text-lg">HƯỚNG DẪN SỐ 1532/HD-CCT NGÀY 20/8/2025</h2>
+      <a href="quandoan/1532_0001.pdf" download class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</a>
+    </div>
+    <div class="flex flex-col items-center">
+      <iframe src="quandoan/1532_0001.pdf" 
+          class="w-full h-[90vh]" 
+          frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <div id="viewert1" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50 overflow-y-auto">
+    <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
+      <button onclick="goBack('viewert1')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
+      <h2 class="font-bold text-lg">CÔNG VĂN SỐ 1764 NGÀY 11/9/2025 VỀ TRIỆU TẬP ĐẠI BIỂU</h2>
+      <a href="quandoan/Công văn số 1764 ngày 11.9.2025 về triệu tập đại biểu.pdf" download class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</a>
+    </div>
+    <div class="flex flex-col items-center">
+      <iframe src="quandoan/Công văn số 1764 ngày 11.9.2025 về triệu tập đại biểu.pdf" 
+          class="w-full h-[90vh]" 
+          frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <div id="viewert2" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50 overflow-y-auto">
+    <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
+      <button onclick="goBack('viewert2')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
+      <h2 class="font-bold text-lg">KẾ HOẠCH 1767 NGÀY 11/9/2025 VỀ BẢO ĐẢM PHỤC VỤ</h2>
+      <a href="quandoan/Kế hoạch số 1767 ngày 11.9.2025 về Bảo đảm phục vụ.pdf" download class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</a>
+    </div>
+    <div class="flex flex-col items-center">
+      <iframe src="quandoan/Kế hoạch số 1767 ngày 11.9.2025 về Bảo đảm phục vụ.pdf" 
+          class="w-full h-[90vh]" 
+          frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <div id="viewerT3" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50 overflow-y-auto">
+    <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
+      <button onclick="goBack('viewert2')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
+      <h2 class="font-bold text-lg">CHỈ THỊ SỐ 109 ngày 05.9.2025 của BTV ĐU Sư đoàn</h2>
+      <a href="SUDOAN/Chỉ thị số 109 ngày 05.9.2025 của BTV ĐU Sư đoàn.pdf" download class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</a>
+    </div>
+    <div class="flex flex-col items-center">
+      <iframe src="SUDOAN/Chỉ thị số 109 ngày 05.9.2025 của BTV ĐU Sư đoàn.pdf" 
+          class="w-full h-[90vh]" 
+          frameborder="0"></iframe>
+    </div>
+  </div>
+  <!-- Viewer 5 -->
+  <!-- Viewer Văn kiện Đại hội -->
+<!-- Viewer Văn kiện Đại hội -->
+<div id="viewerVanKien" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50">
+  <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
+    <button onclick="goBack('viewerVanKien')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
+    <h2 class="font-bold text-lg">📂 VĂN KIỆN ĐẠI HỘI</h2>
+    <a href="https://drive.google.com/drive/folders/1Bp7YEtkjXp2pinvAHvDnzCHCj0VGciOp/preview" 
+       target="_blank" 
+       class="bg-green-600 px-3 py-1 rounded-md">🌐 Mở ngoài</a>
+  </div>
+
+  <!-- Nhúng PDF (thay FILE_ID bằng ID thực tế) -->
+  <iframe src="https://drive.google.com/drive/folders/1Bp7YEtkjXp2pinvAHvDnzCHCj0VGciOp/preview" 
+          class="w-full h-[90vh]" 
+          frameborder="0"></iframe>
+</div>
+
+
+
+  <!-- Viewer 6 -->
+  <div id="viewer6" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50 overflow-y-auto">
+    <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
+      <button onclick="goBack('viewer6')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
+      <h2 class="font-bold text-lg">Ảnh hoạt động 2</h2>
+      <button onclick="downloadZip('viewer6')" class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</button>
+    </div>
+    <div class="flex flex-col items-center">
+      <img src="anh2.png" class="w-full max-w-4xl mb-4">
+    </div>
+  </div>
+
+  <div id="viewer7" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50 overflow-y-auto">
+    <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
+      <button onclick="goBack('viewer7')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
+      <h2 class="font-bold text-lg">HƯỚNG DẪN ĐẠI HỘI</h2>
+      <a href="HDDH.pdf" download class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</a>
+    </div>
+    <div class="flex flex-col items-center">
+      <iframe src="HDDH.pdf" 
+          class="w-full h-[90vh]" 
+          frameborder="0"></iframe>
+    </div>
+
+  </div>
+
+  <div id="viewer8" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50 overflow-y-auto">
+    <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
+      <button onclick="goBack('viewer8')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
+      <h2 class="font-bold text-lg">BÁO CÁO CHÍNH TRỊ</h2>
+      <a href="BBCT.pdf" download class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</a>
+    </div>
+    <div class="flex flex-col items-center">
+      <iframe src="BBCT.pdf" 
+          class="w-full h-[90vh]" 
+          frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>ĐOÀN CƠ SỞ TRUNG ĐOÀN 2</h3>
+        <p>Tuổi trẻ Trung đoàn 2 - Xung kích, sáng tạo, tiên phong trong chuyển đổi số</p>
+      </div>
+      <div class="footer-column">
+        <h3>LIÊN KẾT NHANH</h3>
+        <ul>
+          <li><a href="#">Giới thiệu</a></li>
+          <li><a href="#">Hình ảnh Đại hội</a></li>
+          <li><a href="#">Thư góp ý</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>KẾT NỐI</h3>
+        <p class="text-sm text-gray-200">© 2025 Trung đoàn 2 - Đoàn An Lão Anh Hùng</p>
+    <div class="flex justify-center space-x-4 mt-2">
+      <a href="https://www.facebook.com/groups/177444349774982?locale=vi_VN" class="bg-white text-blue-800 w-8 h-8 rounded-full flex items-center justify-center hover:bg-yellow-400 transition">f</a>
+      <a href="#" class="bg-white text-blue-800 w-8 h-8 rounded-full flex items-center justify-center hover:bg-yellow-400 transition">▶</a>
+      <a href="#" class="bg-white text-blue-800 w-8 h-8 rounded-full flex items-center justify-center hover:bg-yellow-400 transition">♪</a>
+    </div>
+      </div>
+    </div>
+    <p class="text-sm text-gray-200">© Thực hiện bởi : Binh nhất Nguyễn Tiến Thành</p>
+  </footer>
+
+  <script>
+    function toggleOptions(id) {
+      document.querySelectorAll("#mainMenu > div > div").forEach(el => {
+        if (el.id !== id) el.classList.add("hidden");
+      });
+      document.getElementById(id).classList.toggle("hidden");
+    }
+
+    function openViewer(id) {
+      document.getElementById("mainMenu").classList.add("hidden");
+      document.getElementById(id).classList.remove("hidden");
+    }
+
+    function goBack(id) {
+      document.getElementById(id).classList.add("hidden");
+      document.getElementById("mainMenu").classList.remove("hidden");
+    }
+
+    // Nén toàn bộ ảnh trong viewer thành zip
+    async function downloadZip(viewerId) {
+      const viewer = document.getElementById(viewerId);
+      const imgs = viewer.querySelectorAll("img");
+      if (imgs.length === 0) return;
+
+      const zip = new JSZip();
+      let count = 1;
+      for (let img of imgs) {
+        const response = await fetch(img.src);
+        const blob = await response.blob();
+        zip.file(`anh_${count}.jpg`, blob);
+        count++;
+      }
+
+      const content = await zip.generateAsync({type:"blob"});
+      saveAs(content, `${viewerId}.zip`);
+    }
+    function openViewer(id) {
+  document.getElementById("mainMenu").classList.add("hidden");
+  document.getElementById("mainLogo").classList.add("hidden"); // Ẩn logo
+  document.getElementById(id).classList.remove("hidden");
+}
+
+function goBack(id) {
+  document.getElementById(id).classList.add("hidden");
+  document.getElementById("mainMenu").classList.remove("hidden");
+  document.getElementById("mainLogo").classList.remove("hidden"); // Hiện logo lại
+}
+  </script>
+
+</body>
+
+</html>
