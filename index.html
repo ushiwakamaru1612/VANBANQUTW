@@ -207,9 +207,10 @@
         </button>
         
         
-        <button onclick="openViewer('viewer7')" class="block w-full text-left bg-blue-700 text-white px-4 py-2 rounded-md">
-          CHƯƠNG TRÌNH, THỜI GIAN LÀM VIỆC
-        </button>
+        <button onclick="openViewer('viewer7')" 
+        class="block w-full text-left bg-blue-700 text-white px-4 py-2 rounded-md">
+  CHƯƠNG TRÌNH LÀM VIỆC, THỜI GIAN
+</button>
         <button onclick="openViewer('viewer8')" class="block w-full text-left bg-blue-700 text-white px-4 py-2 rounded-md">
           QUY CHẾ ĐẠI HỘI
         </button>
@@ -254,18 +255,55 @@
   </div>
 
   <!-- Viewer 2 -->
-<div id="viewer2" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50">
-  <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
-    <button onclick="goBack('viewer2')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
-    <h2 class="font-bold text-lg">HƯỚNG DẪN SỐ 3523 ngày 09.9.2025 CỦA TCCT</h2>
-    <a href="huongdan.pdf" download class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</a>
+<div id="viewer2" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50 overflow-y-auto">
+    <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
+      <button onclick="goBack('viewer2')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
+      <h2 class="font-bold text-lg">CHỈ THỊ SỐ 4418 NGÀY 31.8.2025 CỦA QUTW</h2>
+      <button onclick="downloadZip('viewer2')" class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</button>
+    </div>
+    <div class="flex flex-col items-center">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0001.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0002.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0003.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0004.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0005.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0006.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0007.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0008.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0009.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0010.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0011.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0012.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0013.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0014.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0015.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0016.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0017.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0018.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0019.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0020.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0021.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0022.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0023.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0024.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0025.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0026.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0027.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0028.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0029.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0030.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0031.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0032.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0033.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0034.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0035.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0036.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0037.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+      <img src="ilovepdf_pages-to-jpg/huongdan_page-0038.jpg" class="w-full max-w-4xl mb-4" alt="Trang 1">
+ 
+      
+    </div>
   </div>
-
-  <!-- Hiển thị file PDF -->
-  <iframe src="huongdan.pdf#view=FitH" 
-          class="w-full h-[90vh]" 
-          frameborder="0"></iframe>
-</div>
 <!-- Viewer them -->
 <div id="viewerthem" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50">
   <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
@@ -286,13 +324,51 @@
   <div id="viewer3" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50 overflow-y-auto">
     <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
       <button onclick="goBack('viewer3')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
-      <h2 class="font-bold text-lg">CHỈ THỊ CỦA BAN THƯỜNG VỤ ĐẢNG ỦY QUÂN KHU</h2>
-      <a href="quandoan/Doc1.pdf" download class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</a>
+      <h2 class="font-bold text-lg">CHỈ THỊ CỦA BAN THƯỜNG VỤ ĐẢNG QUÂN KHU</h2>
+      <button onclick="downloadZip('viewer3')" class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</button>
     </div>
     <div class="flex flex-col items-center">
-      <iframe src="quandoan/Doc1.pdf" 
-          class="w-full h-[90vh]" 
-          frameborder="0"></iframe>
+      <img src="ANH/qk/1.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/2.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/3.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/4.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/5.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/6.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/7.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/8.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/9.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/10.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/11.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/12.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/13.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/14.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/15.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/16.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/17.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/18.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/19.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/20.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/21.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/22.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/23.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/24.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/25.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/26.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/27.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/28.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/29.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/30.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/31.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/32.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/33.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/34.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/35.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/36.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/37.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/qk/38.jpg" class="w-full max-w-4xl mb-4">
+     
+      
+      
     </div>
   </div>
 
@@ -336,17 +412,7 @@
     </div>
   </div>
 
-  <div id="viewerT3" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50 overflow-y-auto">
-    <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
-      <button onclick="goBack('viewerT3')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
-      <h2 class="font-bold text-lg">CHỈ THỊ SỐ 109 ngày 05.9.2025 của BTV ĐU Sư đoàn</h2>
-      <a href="SUDOAN/Chỉ thị số 109 ngày 05.9.2025 của BTV ĐU Sư đoàn.pdf" download class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</a>
-    </div>
-    <div class="flex flex-col items-center">
-      <iframe src="SUDOAN/Chỉ thị số 109 ngày 05.9.2025 của BTV ĐU Sư đoàn.pdf" 
-          class="w-full h-[90vh]" 
-          frameborder="0"></iframe>
-    </div>
+
   </div>
   <!-- Viewer 5 -->
   <!-- Viewer Văn kiện Đại hội -->
@@ -369,82 +435,124 @@
 
 
   <!-- Viewer 6 -->
-  <div id="viewer6" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50 overflow-y-auto">
+   <div id="viewer01" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50 overflow-y-auto">
     <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
-      <button onclick="goBack('viewer6')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
-      <h2 class="font-bold text-lg">Ảnh hoạt động 2</h2>
-      <button onclick="downloadZip('viewer6')" class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</button>
+      <button onclick="goBack('viewer01')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
+      <h2 class="font-bold text-lg">ĐỀ ÁN XÂY DỰNG BAN CHẤP HÀNH</h2>
+      <button onclick="downloadZip('viewer7')" class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</button>
     </div>
     <div class="flex flex-col items-center">
-      <img src="anh2.png" class="w-full max-w-4xl mb-4">
+      <img src="5.-Đề-án-xây-dựng-BCH-Đoàn-cơ-sở-CHUAN.jpg/699d0ab24eb30d8e00d5d79459def847-0.jpg" class="w-full max-w-4xl mb-4">
+      <img src="5.-Đề-án-xây-dựng-BCH-Đoàn-cơ-sở-CHUAN.jpg/699d0ab24eb30d8e00d5d79459def847-1.jpg" class="w-full max-w-4xl mb-4">
+       <img src="5.-Đề-án-xây-dựng-BCH-Đoàn-cơ-sở-CHUAN.jpg/699d0ab24eb30d8e00d5d79459def847-2.jpg" class="w-full max-w-4xl mb-4">
     </div>
   </div>
 
   <div id="viewer7" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50 overflow-y-auto">
     <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
       <button onclick="goBack('viewer7')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
-      <h2 class="font-bold text-lg">CHƯƠNG TRÌNH LÀM VIỆC</h2>
-      <a href="vbdh/CHƯƠNG TRÌNH ĐHĐB Sửa ngày 11-9 bản chuẩn.pdf" download class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</a>
+      <h2 class="font-bold text-lg">CHƯƠNG TRÌNH LÀM VIỆC, THỜI GIAN</h2>
+      <button onclick="downloadZip('viewer7')" class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</button>
     </div>
     <div class="flex flex-col items-center">
-      <iframe src="vbdh/CHƯƠNG TRÌNH ĐHĐB Sửa ngày 11-9 bản chuẩn.pdf" 
-          class="w-full h-[90vh]" 
-          frameborder="0"></iframe>
+      <img src="CHƯƠNG-TRÌNH-ĐHĐB-Sửa-ngày-11-9-bản-chuẩn.jpg/ab1b99cab9f8a0fea6b3b91264cf3f1b-0.jpg" class="w-full max-w-4xl mb-4">
+      <img src="CHƯƠNG-TRÌNH-ĐHĐB-Sửa-ngày-11-9-bản-chuẩn.jpg/ab1b99cab9f8a0fea6b3b91264cf3f1b-1.jpg" class="w-full max-w-4xl mb-4">
+      
     </div>
-
   </div>
-
+  <div id="viewerT3" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50 overflow-y-auto">
+    <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
+      <button onclick="goBack('viewerT3')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
+      <h2 class="font-bold text-lg">CHỈ THỊ SỐ 4418 NGÀY 31.8.2025 CỦA QUTW</h2>
+      <button onclick="downloadZip('viewerT3')" class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</button>
+    </div>
+    <div class="flex flex-col items-center">
+      <img src="ANH/1.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/2.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/3.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/4.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/5.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/6.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/7.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/8.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/9.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/10.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/11.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/12.jpg" class="w-full max-w-4xl mb-4">
+      <img src="ANH/13.jpg" class="w-full max-w-4xl mb-4">
+    </div>
+    
+  </div>
+  
+  
   <div id="viewer8" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50 overflow-y-auto">
     <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
       <button onclick="goBack('viewer8')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
       <h2 class="font-bold text-lg">QUY CHẾ LÀM VIỆC ĐẠI HỘI</h2>
-      <a href="vbdh/3. QUY CHẾ LÀM VIỆC CỦA ĐH.pdf" download class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</a>
+      <button onclick="downloadZip('viewer8')" class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</button>
     </div>
+    <div>
     <div class="flex flex-col items-center">
-      <iframe src="vbdh/3. QUY CHẾ LÀM VIỆC CỦA ĐH.pdf" 
-          class="w-full h-[90vh]" 
-          frameborder="0"></iframe>
+      <img src="3.-QUY-CHẾ-LÀM-VIỆC-CỦA-ĐH-khương-sửa-13-9-25.jpg/a508b1bc70f70ca5ca71b5a5c5a0928d-0.jpg" class="w-full max-w-4xl mb-4">
+      <img src="3.-QUY-CHẾ-LÀM-VIỆC-CỦA-ĐH-khương-sửa-13-9-25.jpg/a508b1bc70f70ca5ca71b5a5c5a0928d-1.jpg" class="w-full max-w-4xl mb-4">
+      <img src="3.-QUY-CHẾ-LÀM-VIỆC-CỦA-ĐH-khương-sửa-13-9-25.jpg/a508b1bc70f70ca5ca71b5a5c5a0928d-2.jpg" class="w-full max-w-4xl mb-4">
+      <img src="3.-QUY-CHẾ-LÀM-VIỆC-CỦA-ĐH-khương-sửa-13-9-25.jpg/a508b1bc70f70ca5ca71b5a5c5a0928d-3.jpg" class="w-full max-w-4xl mb-4">
+      <img src="3.-QUY-CHẾ-LÀM-VIỆC-CỦA-ĐH-khương-sửa-13-9-25.jpg/a508b1bc70f70ca5ca71b5a5c5a0928d-4.jpg" class="w-full max-w-4xl mb-4">
+      <img src="3.-QUY-CHẾ-LÀM-VIỆC-CỦA-ĐH-khương-sửa-13-9-25.jpg/a508b1bc70f70ca5ca71b5a5c5a0928d-5.jpg" class="w-full max-w-4xl mb-4">
+      <img src="3.-QUY-CHẾ-LÀM-VIỆC-CỦA-ĐH-khương-sửa-13-9-25.jpg/a508b1bc70f70ca5ca71b5a5c5a0928d-6.jpg" class="w-full max-w-4xl mb-4">
+      <img src="3.-QUY-CHẾ-LÀM-VIỆC-CỦA-ĐH-khương-sửa-13-9-25.jpg/a508b1bc70f70ca5ca71b5a5c5a0928d-7.jpg" class="w-full max-w-4xl mb-4">
     </div>
+  </div>
+
+  <!-- Container ảnh -->
+  <div id="imageContainer" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4"></div>
 </div>
 
     <div id="viewer9" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50 overflow-y-auto">
     <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
       <button onclick="goBack('viewer9')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
       <h2 class="font-bold text-lg">BÁO CÁO CHÍNH TRỊ</h2>
-      <a href="vbdh/1. BÁO CÁO CHÍNH TRỊ.pdf" download class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</a>
+      <button onclick="downloadZip('viewer9')" class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</button>
     </div>
+    <div>
     <div class="flex flex-col items-center">
-      <iframe src="vbdh/1. BÁO CÁO CHÍNH TRỊ.pdf" 
-          class="w-full h-[90vh]" 
-          frameborder="0"></iframe>
+      <img src="1.-BÁO-CÁO-CHÍNH-TRỊ-e2-P.ChU-sửa-lần-5-ngày-12.9.25-bản-chuẩn-nộp-sư-đoàn.jpg/7a198b46d5298792db3cfbf2d7d4c869-0.jpg" class="w-full max-w-4xl mb-4">
+      <img src="1.-BÁO-CÁO-CHÍNH-TRỊ-e2-P.ChU-sửa-lần-5-ngày-12.9.25-bản-chuẩn-nộp-sư-đoàn.jpg/7a198b46d5298792db3cfbf2d7d4c869-1.jpg" class="w-full max-w-4xl mb-4">
+      <img src="1.-BÁO-CÁO-CHÍNH-TRỊ-e2-P.ChU-sửa-lần-5-ngày-12.9.25-bản-chuẩn-nộp-sư-đoàn.jpg/7a198b46d5298792db3cfbf2d7d4c869-2.jpg" class="w-full max-w-4xl mb-4">
+      <img src="1.-BÁO-CÁO-CHÍNH-TRỊ-e2-P.ChU-sửa-lần-5-ngày-12.9.25-bản-chuẩn-nộp-sư-đoàn.jpg/7a198b46d5298792db3cfbf2d7d4c869-3.jpg" class="w-full max-w-4xl mb-4">
+      <img src="1.-BÁO-CÁO-CHÍNH-TRỊ-e2-P.ChU-sửa-lần-5-ngày-12.9.25-bản-chuẩn-nộp-sư-đoàn.jpg/7a198b46d5298792db3cfbf2d7d4c869-4.jpg" class="w-full max-w-4xl mb-4">
+      <img src="1.-BÁO-CÁO-CHÍNH-TRỊ-e2-P.ChU-sửa-lần-5-ngày-12.9.25-bản-chuẩn-nộp-sư-đoàn.jpg/7a198b46d5298792db3cfbf2d7d4c869-5.jpg" class="w-full max-w-4xl mb-4">
+      <img src="1.-BÁO-CÁO-CHÍNH-TRỊ-e2-P.ChU-sửa-lần-5-ngày-12.9.25-bản-chuẩn-nộp-sư-đoàn.jpg/7a198b46d5298792db3cfbf2d7d4c869-6.jpg" class="w-full max-w-4xl mb-4">
+      <img src="1.-BÁO-CÁO-CHÍNH-TRỊ-e2-P.ChU-sửa-lần-5-ngày-12.9.25-bản-chuẩn-nộp-sư-đoàn.jpg/7a198b46d5298792db3cfbf2d7d4c869-7.jpg" class="w-full max-w-4xl mb-4">
+      <img src="1.-BÁO-CÁO-CHÍNH-TRỊ-e2-P.ChU-sửa-lần-5-ngày-12.9.25-bản-chuẩn-nộp-sư-đoàn.jpg/7a198b46d5298792db3cfbf2d7d4c869-8.jpg" class="w-full max-w-4xl mb-4">
+      <img src="1.-BÁO-CÁO-CHÍNH-TRỊ-e2-P.ChU-sửa-lần-5-ngày-12.9.25-bản-chuẩn-nộp-sư-đoàn.jpg/7a198b46d5298792db3cfbf2d7d4c869-9.jpg" class="w-full max-w-4xl mb-4">
+      <img src="1.-BÁO-CÁO-CHÍNH-TRỊ-e2-P.ChU-sửa-lần-5-ngày-12.9.25-bản-chuẩn-nộp-sư-đoàn.jpg/7a198b46d5298792db3cfbf2d7d4c869-10.jpg" class="w-full max-w-4xl mb-4">
+      <img src="1.-BÁO-CÁO-CHÍNH-TRỊ-e2-P.ChU-sửa-lần-5-ngày-12.9.25-bản-chuẩn-nộp-sư-đoàn.jpg/7a198b46d5298792db3cfbf2d7d4c869-11.jpg" class="w-full max-w-4xl mb-4">
+      <img src="1.-BÁO-CÁO-CHÍNH-TRỊ-e2-P.ChU-sửa-lần-5-ngày-12.9.25-bản-chuẩn-nộp-sư-đoàn.jpg/7a198b46d5298792db3cfbf2d7d4c869-12.jpg" class="w-full max-w-4xl mb-4">
+
     </div>
+  </div>
 
   </div>
 
   <div id="viewer0" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50 overflow-y-auto">
     <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
       <button onclick="goBack('viewer0')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
-      <h2 class="font-bold text-lg">BÁO CÁO KIẾM ĐIỂM</h2>
-      <a href="vbdh/2. Báo cáo kiểm điểm BCH ĐCS e2.pdf" download class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</a>
+      <h2 class="font-bold text-lg">BÁO CÁO KIỂM ĐIỂM</h2>
+      <button onclick="downloadZip('viewer0')" class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</button>
     </div>
+    <div>
     <div class="flex flex-col items-center">
-      <iframe src="vbdh/2. Báo cáo kiểm điểm BCH ĐCS e2.pdf" 
-          class="w-full h-[90vh]" 
-          frameborder="0"></iframe>
+      <img src="2.-Báo-cáo-kiểm-điểm-BCH-ĐCS-e2.jpg/31ab215b0f4625fe9ee39059ea46c4a6-0.jpg" class="w-full max-w-4xl mb-4">
+      <img src="2.-Báo-cáo-kiểm-điểm-BCH-ĐCS-e2.jpg/31ab215b0f4625fe9ee39059ea46c4a6-2.jpg" class="w-full max-w-4xl mb-4">
+      <img src="2.-Báo-cáo-kiểm-điểm-BCH-ĐCS-e2.jpg/31ab215b0f4625fe9ee39059ea46c4a6-3.jpg" class="w-full max-w-4xl mb-4">
+      <img src="2.-Báo-cáo-kiểm-điểm-BCH-ĐCS-e2.jpg/31ab215b0f4625fe9ee39059ea46c4a6-4.jpg" class="w-full max-w-4xl mb-4">
     </div>
   </div>
 
-  <div id="viewer01" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50 overflow-y-auto">
-    <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
-      <button onclick="goBack('viewer01')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
-      <h2 class="font-bold text-lg">ĐỀ ÁN XÂY DỰNG BAN CHẤP HÀNH</h2>
-      <a href="vbdh/5. Đề án xây dựng BCH - Đoàn cơ sở CHUAN.pdf" download class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</a>
-    </div>
-    <div class="flex flex-col items-center">
-      <iframe src="vbdh/5. Đề án xây dựng BCH - Đoàn cơ sở CHUAN.pdf" 
-          class="w-full h-[90vh]" 
-          frameborder="0"></iframe>
-    </div>
+ 
+
+
   </div>
 
 <div id="gioithieu" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50 overflow-y-auto">
@@ -538,6 +646,15 @@
   </footer>
 
   <script>
+    window.onload = function() {
+    const container = document.getElementById("imageContainer");
+    for (let i = 1; i <= 40; i++) {
+      const img = document.createElement("img");
+      img.src = `anh/${i}.jpg`; // ảnh đặt trong thư mục /anh
+      img.className = "w-full rounded-lg shadow-md";
+      container.appendChild(img);
+    }
+  }
     function toggleOptions(id) {
       document.querySelectorAll("#mainMenu > div > div").forEach(el => {
         if (el.id !== id) el.classList.add("hidden");
