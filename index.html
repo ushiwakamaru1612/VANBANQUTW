@@ -21,8 +21,7 @@
     footer {
       background-color: #0d1f8c; /* xanh đậm */
       color: white;
-      padding: 30px 50px;
-      
+      padding: 30px 50px;     
       margin-top: 40px;
     }
 
@@ -129,7 +128,7 @@
   <div class="til mb-6">
     <img src="Huy_Hiệu_Đoàn.png" width="200" alt="" class="mx-auto">
     <h1 class="text-yellow-300 text-2xl font-bold mt-4">
-      ĐẠI HỘI ĐẠI BIỂU ĐOÀN TNCS<br>HỒ CHÍ MINH, ĐOÀN CƠ SỞ <br>TRUNG ĐOÀN 2 LẦN THỨ IX 
+      ĐẠI HỘI ĐẠI BIỂU ĐOÀN TNCS HỒ CHÍ MINH, ĐOÀN CƠ SỞ TRUNG ĐOÀN 2 LẦN THỨ IX 
       <br>NHIỆM KỲ 2025 - 2030
     </h1>
     <h2 class="mt-2">📂 VĂN KIỆN ĐIỆN TỬ - Dùng trong Đại hội đại biểu</h2>
@@ -209,12 +208,22 @@
         
         
         <button onclick="openViewer('viewer7')" class="block w-full text-left bg-blue-700 text-white px-4 py-2 rounded-md">
-          HƯỚNG DẪN ĐẠI HỘI
+          CHƯƠNG TRÌNH, THỜI GIAN LÀM VIỆC
         </button>
         <button onclick="openViewer('viewer8')" class="block w-full text-left bg-blue-700 text-white px-4 py-2 rounded-md">
+          QUY CHẾ ĐẠI HỘI
+        </button>
+        <button onclick="openViewer('viewer9')" class="block w-full text-left bg-blue-700 text-white px-4 py-2 rounded-md">
           BÁO CÁO CHÍNH TRỊ
         </button>
-        
+        <button onclick="openViewer('viewer0')" class="block w-full text-left bg-blue-700 text-white px-4 py-2 rounded-md">
+          BÁO CÁO KIẾM ĐIỂM
+        </button>
+        <button onclick="openViewer('viewer01')" class="block w-full text-left bg-blue-700 text-white px-4 py-2 rounded-md">
+          ĐỀ ÁN XÂY DỰNG BAN CHẤP HÀNH
+        </button>
+
+
       </div>
     </div>
     <!-- Nút 2 -->
@@ -374,11 +383,11 @@
   <div id="viewer7" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50 overflow-y-auto">
     <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
       <button onclick="goBack('viewer7')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
-      <h2 class="font-bold text-lg">HƯỚNG DẪN ĐẠI HỘI</h2>
-      <a href="HDDH.pdf" download class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</a>
+      <h2 class="font-bold text-lg">CHƯƠNG TRÌNH LÀM VIỆC</h2>
+      <a href="vbdh/CHƯƠNG TRÌNH ĐHĐB Sửa ngày 11-9 bản chuẩn.pdf" download class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</a>
     </div>
     <div class="flex flex-col items-center">
-      <iframe src="HDDH.pdf" 
+      <iframe src="vbdh/CHƯƠNG TRÌNH ĐHĐB Sửa ngày 11-9 bản chuẩn.pdf" 
           class="w-full h-[90vh]" 
           frameborder="0"></iframe>
     </div>
@@ -388,14 +397,117 @@
   <div id="viewer8" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50 overflow-y-auto">
     <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
       <button onclick="goBack('viewer8')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
-      <h2 class="font-bold text-lg">BÁO CÁO CHÍNH TRỊ</h2>
-      <a href="BBCT.pdf" download class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</a>
+      <h2 class="font-bold text-lg">QUY CHẾ LÀM VIỆC ĐẠI HỘI</h2>
+      <a href="vbdh/3. QUY CHẾ LÀM VIỆC CỦA ĐH.pdf" download class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</a>
     </div>
     <div class="flex flex-col items-center">
-      <iframe src="BBCT.pdf" 
+      <iframe src="vbdh/3. QUY CHẾ LÀM VIỆC CỦA ĐH.pdf" 
           class="w-full h-[90vh]" 
           frameborder="0"></iframe>
     </div>
+</div>
+
+    <div id="viewer9" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50 overflow-y-auto">
+    <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
+      <button onclick="goBack('viewer9')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
+      <h2 class="font-bold text-lg">BÁO CÁO CHÍNH TRỊ</h2>
+      <a href="vbdh/1. BÁO CÁO CHÍNH TRỊ.pdf" download class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</a>
+    </div>
+    <div class="flex flex-col items-center">
+      <iframe src="vbdh/1. BÁO CÁO CHÍNH TRỊ.pdf" 
+          class="w-full h-[90vh]" 
+          frameborder="0"></iframe>
+    </div>
+
+  </div>
+
+  <div id="viewer0" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50 overflow-y-auto">
+    <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
+      <button onclick="goBack('viewer0')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
+      <h2 class="font-bold text-lg">BÁO CÁO KIẾM ĐIỂM</h2>
+      <a href="vbdh/2. Báo cáo kiểm điểm BCH ĐCS e2.pdf" download class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</a>
+    </div>
+    <div class="flex flex-col items-center">
+      <iframe src="vbdh/2. Báo cáo kiểm điểm BCH ĐCS e2.pdf" 
+          class="w-full h-[90vh]" 
+          frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <div id="viewer01" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50 overflow-y-auto">
+    <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
+      <button onclick="goBack('viewer01')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
+      <h2 class="font-bold text-lg">ĐỀ ÁN XÂY DỰNG BAN CHẤP HÀNH</h2>
+      <a href="vbdh/5. Đề án xây dựng BCH - Đoàn cơ sở CHUAN.pdf" download class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</a>
+    </div>
+    <div class="flex flex-col items-center">
+      <iframe src="vbdh/5. Đề án xây dựng BCH - Đoàn cơ sở CHUAN.pdf" 
+          class="w-full h-[90vh]" 
+          frameborder="0"></iframe>
+    </div>
+  </div>
+
+<div id="gioithieu" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50 overflow-y-auto">
+  <!-- Thanh tiêu đề -->
+  <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
+    <button onclick="goBack('gioithieu')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
+    <h2 class="font-bold text-lg">GIỚI THIỆU</h2>
+    <span></span>
+  </div>
+
+  <!-- Nội dung giới thiệu -->
+  <section class="gioi-thieu" style="padding: 30px; background: #f9f9f9; font-family: 'Segoe UI', sans-serif; line-height: 1.6;">
+  <div style="max-width: 900px; margin: auto; text-align: justify; color: #222;">
+    <h2 style="text-align: center; color: #006400; margin-bottom: 20px;">
+      🌟 TRUNG ĐOÀN 2 - ĐOÀN AN LÃO ANH HÙNG 🌟
+    </h2>
+    <p>
+      Trung đoàn 2 (Đoàn An Lão), thuộc Sư đoàn 3, Quân khu 1, được thành lập ngày <b>8-5-1962</b> 
+      tại căn cứ Nước Chè, tỉnh Kon Tum. Trải qua hơn 60 năm xây dựng, chiến đấu và trưởng thành, 
+      cán bộ, chiến sĩ Trung đoàn đã hun đúc nên truyền thống vẻ vang: 
+      <i>“Bám đất, bám dân, càng đánh càng mạnh, càng đánh càng trưởng thành”.</i>
+    </p>
+
+    <div style="text-align:center; margin:20px 0;">
+      <img src="Huy_Hiệu_Đoàn.png" 
+           alt="Logo Đoàn TNCS Hồ Chí Minh" style="max-width:180px; opacity:0.9;">
+    </div>
+
+    <p>
+      Tên gọi <b>Đoàn An Lão anh hùng</b> gắn liền với chiến công lịch sử trong Chiến dịch An Lão 
+      (7-8/12/1964), khi Trung đoàn phối hợp cùng các lực lượng loại khỏi vòng chiến đấu gần 
+      600 tên địch, bắn cháy và phá hủy nhiều phương tiện chiến đấu, giải phóng huyện An Lão, tỉnh Bình Định. 
+      Từ đó, đơn vị vinh dự được mang tên <b>“Đoàn An Lão”</b>.
+    </p>
+
+    <p>
+      Trải qua các thời kỳ chiến đấu ác liệt và nhiệm vụ bảo vệ Tổ quốc, Trung đoàn 2 luôn nêu cao 
+      tinh thần kiên cường, đoàn kết, sáng tạo; hoàn thành xuất sắc nhiệm vụ huấn luyện, sẵn sàng chiến đấu. 
+      Năm 2021, Trung đoàn được Bộ tư lệnh Quân khu 1 tặng danh hiệu 
+      <b>“Đơn vị vững mạnh toàn diện, mẫu mực, tiêu biểu”</b>, 
+      đồng thời nhận <b>Cờ thi đua Đơn vị xuất sắc</b> trong Phong trào Thi đua Quyết thắng.
+    </p>
+
+    <p>
+      Hiện nay, Đảng ủy và Chỉ huy Trung đoàn đặc biệt chú trọng công tác 
+      <b>giáo dục truyền thống</b>, coi đó là động lực, là quyết tâm để mỗi cán bộ, chiến sĩ 
+      rèn luyện bản lĩnh, hun đúc ý chí quyết tâm, xứng danh <i>Bộ đội Cụ Hồ</i> trong thời kỳ mới.
+    </p>
+
+    <div style="text-align:center; margin:20px 0;">
+      <img src="496842850_673397968725971_8628429809873434803_n.jpg" 
+           alt="Chiến sĩ Trung đoàn 2 huấn luyện" style="max-width:100%; border-radius:10px;">
+      <p style="font-size:13px; color:#555;">Cán bộ, chiến sĩ Trung đoàn 2 trong huấn luyện và rèn luyện.</p>
+    </div>
+
+    <p style="text-align:center; font-weight:bold; color:#006400; margin-top:30px;">
+      ✨ Trung đoàn 2 - Đoàn An Lão Anh Hùng <br>
+      Xứng đáng với truyền thống vẻ vang, niềm tin yêu của Đảng, Quân đội và Nhân dân ✨
+    </p>
+  </div>
+</section>
+
+
   </div>
 
   <footer>
@@ -407,7 +519,7 @@
       <div class="footer-column">
         <h3>LIÊN KẾT NHANH</h3>
         <ul>
-          <li><a href="#">Giới thiệu</a></li>
+          <li><a href="#" onclick="openViewer('gioithieu')">Giới thiệu</a></li>
           <li><a href="#">Hình ảnh Đại hội</a></li>
           <li><a href="#">Thư góp ý</a></li>
         </ul>
