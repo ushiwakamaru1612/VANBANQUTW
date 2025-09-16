@@ -223,6 +223,9 @@
         <button onclick="openViewer('viewer01')" class="block w-full text-left bg-blue-700 text-white px-4 py-2 rounded-md">
           ĐỀ ÁN XÂY DỰNG BAN CHẤP HÀNH
         </button>
+        <button onclick="openViewer('viewerthem')" class="block w-full text-left bg-blue-700 text-white px-4 py-2 rounded-md">
+          CHỖ NGỒI HỘI TRƯỜNG
+        </button>
 
 
       </div>
@@ -305,19 +308,16 @@
     </div>
   </div>
 <!-- Viewer them -->
-<div id="viewerthem" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50">
-  <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
-    <button onclick="goBack('viewerthem')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
-    <h2 class="font-bold text-lg">CÔNG VĂN SỐ 1231 NGÀY 10/9/2025 CỦA BTNQĐ VỀ PHỐI HỢP CHỈ ĐẠO ĐH
-</h2>
-    <a href="congvan 1231.pdf" download class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</a>
+<div id="viewerthem" class="hidden w-full h-screen flex flex-col bg-blue-900 fixed inset-0 z-50 overflow-y-auto">
+    <div class="flex justify-between items-center bg-blue-800 text-white px-4 py-2 sticky top-0 z-10">
+      <button onclick="goBack('viewerthem')" class="bg-blue-600 px-3 py-1 rounded-md">← Quay lại</button>
+      <h2 class="font-bold text-lg">CHỈ THỊ SỐ 4418 NGÀY 31.8.2025 CỦA QUTW</h2>
+      <button onclick="downloadZip('viewerthem')" class="bg-green-600 px-3 py-1 rounded-md">⬇ Tải xuống</button>
+    </div>
+    <div class="flex flex-col items-center">
+      <img src="chỗ ngồi Hội trường in mới (1).png" class="w-full max-w-4xl mb-4" alt="Trang 1">
+    </div>
   </div>
-
-  <!-- Hiển thị file PDF -->
-  <iframe src="congvan 1231.pdf#view=FitH" 
-          class="w-full h-[90vh]" 
-          frameborder="0"></iframe>
-</div>
 
 
   <!-- Viewer 3 -->
@@ -503,7 +503,7 @@
       <img src="3.-QUY-CHẾ-LÀM-VIỆC-CỦA-ĐH-khương-sửa-13-9-25.jpg/a508b1bc70f70ca5ca71b5a5c5a0928d-7.jpg" class="w-full max-w-4xl mb-4">
     </div>
   </div>
-
+  
   <!-- Container ảnh -->
   <div id="imageContainer" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4"></div>
 </div>
